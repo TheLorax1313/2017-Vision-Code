@@ -1,0 +1,473 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_linux_zero.cpp:254), pid=1228, tid=1627374688
+#  fatal error: caught unhandled signal 11
+#
+# JRE version: OpenJDK Runtime Environment (8.0_40-b04) (build 1.8.0_40-internal-b04)
+# Java VM: OpenJDK Zero VM (25.40-b08 interpreted mode linux-arm )
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x607fe000,0x60ffd000],  sp=0x60ffb550,  free space=8181k
+
+---------------  P R O C E S S  ---------------
+
+VM state:at safepoint (shutting down)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x76305150] Threads_lock - owner thread: 0x76359ca8
+
+Heap:
+ def new generation   total 4352K, used 2123K [0x66a00000, 0x66ea0000, 0x6b200000)
+  eden space 3968K,  43% used [0x66a00000, 0x66bb2ef8, 0x66de0000)
+  from space 384K,  99% used [0x66de0000, 0x66e3fff8, 0x66e40000)
+  to   space 384K,   0% used [0x66e40000, 0x66e40000, 0x66ea0000)
+ tenured generation   total 9600K, used 1085K [0x6b200000, 0x6bb60000, 0x74200000)
+   the space 9600K,  11% used [0x6b200000, 0x6b30f5f0, 0x6b30f600, 0x6bb60000)
+ Metaspace       used 2406K, capacity 2528K, committed 2584K, reserved 4400K
+
+Card table byte_map: [0x66993000,0x66a00000] byte_map_base: 0x6665e000
+
+Polling page: 0x76f43000
+
+CodeCache: size=32768Kb used=81Kb max_used=81Kb free=32686Kb
+ bounds [0x742e4000, 0x7430c000, 0x762e4000]
+ total_blobs=258 nmethods=0 adapters=250
+ compilation: disabled (interpreter mode)
+
+Compilation events (0 events):
+No events
+
+GC Heap History (4 events):
+Event: 18.174 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4352K, used 3967K [0x66a00000, 0x66ea0000, 0x6b200000)
+  eden space 3968K,  99% used [0x66a00000, 0x66ddfdc8, 0x66de0000)
+  from space 384K,   0% used [0x66de0000, 0x66de0000, 0x66e40000)
+  to   space 384K,   0% used [0x66e40000, 0x66e40000, 0x66ea0000)
+ tenured generation   total 9600K, used 0K [0x6b200000, 0x6bb60000, 0x74200000)
+   the space 9600K,   0% used [0x6b200000, 0x6b200000, 0x6b200200, 0x6bb60000)
+ Metaspace       used 2403K, capacity 2528K, committed 2584K, reserved 4400K
+Event: 18.185 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4352K, used 384K [0x66a00000, 0x66ea0000, 0x6b200000)
+  eden space 3968K,   0% used [0x66a00000, 0x66a00000, 0x66de0000)
+  from space 384K, 100% used [0x66e40000, 0x66ea0000, 0x66ea0000)
+  to   space 384K,   0% used [0x66de0000, 0x66de0000, 0x66e40000)
+ tenured generation   total 9600K, used 608K [0x6b200000, 0x6bb60000, 0x74200000)
+   the space 9600K,   6% used [0x6b200000, 0x6b2983f8, 0x6b298400, 0x6bb60000)
+ Metaspace       used 2403K, capacity 2528K, committed 2584K, reserved 4400K
+}
+Event: 60.091 GC heap before
+{Heap before GC invocations=1 (full 0):
+ def new generation   total 4352K, used 4350K [0x66a00000, 0x66ea0000, 0x6b200000)
+  eden space 3968K,  99% used [0x66a00000, 0x66ddf990, 0x66de0000)
+  from space 384K, 100% used [0x66e40000, 0x66ea0000, 0x66ea0000)
+  to   space 384K,   0% used [0x66de0000, 0x66de0000, 0x66e40000)
+ tenured generation   total 9600K, used 608K [0x6b200000, 0x6bb60000, 0x74200000)
+   the space 9600K,   6% used [0x6b200000, 0x6b2983f8, 0x6b298400, 0x6bb60000)
+ Metaspace       used 2403K, capacity 2528K, committed 2584K, reserved 4400K
+Event: 60.109 GC heap after
+Heap after GC invocations=2 (full 0):
+ def new generation   total 4352K, used 383K [0x66a00000, 0x66ea0000, 0x6b200000)
+  eden space 3968K,   0% used [0x66a00000, 0x66a00000, 0x66de0000)
+  from space 384K,  99% used [0x66de0000, 0x66e3fff8, 0x66e40000)
+  to   space 384K,   0% used [0x66e40000, 0x66e40000, 0x66ea0000)
+ tenured generation   total 9600K, used 1085K [0x6b200000, 0x6bb60000, 0x74200000)
+   the space 9600K,  11% used [0x6b200000, 0x6b30f5f0, 0x6b30f600, 0x6bb60000)
+ Metaspace       used 2403K, capacity 2528K, committed 2584K, reserved 4400K
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2.850 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66bec6d0) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 2.860 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66bf13e0) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 2.867 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66bf6238) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 2.935 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66bfaf98) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.000 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66bffdf0) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.014 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66c0db50) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.026 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66c14940) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.039 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66c1a420) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.056 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66c202a8) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+Event: 3.066 Thread 0x76305f58 Exception <a 'java/security/PrivilegedActionException'> (0x66c26898) thrown at [/build/openjdk-8-JBDAwJ/openjdk-8-8u40~b04/src/hotspot/src/share/vm/prims/jvm.cpp, line 1276]
+
+Events (10 events):
+Event: 60.091 Executing VM operation: GenCollectForAllocation
+Event: 60.109 Executing VM operation: GenCollectForAllocation done
+Event: 60.110 loading class sun/misc/Cleaner
+Event: 60.110 loading class sun/misc/Cleaner done
+Event: 82.110 loading class sun/misc/Signal$1
+Event: 82.115 loading class sun/misc/Signal$1 done
+Event: 82.126 Thread 0x656028b8 Thread added: 0x656028b8
+Event: 82.131 Thread 0x65603b68 Thread added: 0x65603b68
+Event: 82.140 Thread 0x7637b8c8 Thread exited: 0x7637b8c8
+Event: 82.140 Executing VM operation: Exit
+
+
+Dynamic libraries:
+00010000-00011000 r-xp 00000000 b3:02 384298     /usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java
+00020000-00021000 r--p 00000000 b3:02 384298     /usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java
+00021000-00022000 rw-p 00001000 b3:02 384298     /usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java
+01189000-011e6000 rw-p 00000000 00:00 0          [heap]
+5ce00000-5ce03000 ---p 00000000 00:00 0 
+5ce03000-5cf80000 rwxp 00000000 00:00 0 
+5cf80000-5cf83000 ---p 00000000 00:00 0 
+5cf83000-5d100000 rwxp 00000000 00:00 0 
+5d100000-5d101000 ---p 00000000 00:00 0 
+5d101000-5d900000 rwxp 00000000 00:00 0 
+5d900000-5d901000 ---p 00000000 00:00 0 
+5d901000-5e100000 rwxp 00000000 00:00 0 
+5e100000-5e101000 ---p 00000000 00:00 0 
+5e101000-5e900000 rwxp 00000000 00:00 0 
+5e900000-5e901000 ---p 00000000 00:00 0 
+5e901000-5f100000 rwxp 00000000 00:00 0 
+5f100000-5f101000 ---p 00000000 00:00 0 
+5f101000-5f900000 rwxp 00000000 00:00 0 
+5f900000-5f9fb000 rw-p 00000000 00:00 0 
+5f9fb000-5fa00000 ---p 00000000 00:00 0 
+5fa00000-5fa9b000 rw-p 00000000 00:00 0 
+5fa9b000-5fb00000 ---p 00000000 00:00 0 
+5fb00000-5fc00000 rw-p 00000000 00:00 0 
+5fd00000-5fe00000 rw-p 00000000 00:00 0 
+5fef5000-5ff67000 rw-p 00000000 00:00 0 
+5ff67000-5ff68000 ---p 00000000 00:00 0 
+5ff68000-60767000 rwxp 00000000 00:00 0 
+607fd000-607fe000 ---p 00000000 00:00 0 
+607fe000-60ffd000 rwxp 00000000 00:00 0 
+60ffd000-60ffe000 ---p 00000000 00:00 0 
+60ffe000-617fd000 rwxp 00000000 00:00 0 
+617fd000-617fe000 ---p 00000000 00:00 0 
+617fe000-61ffd000 rwxp 00000000 00:00 0 
+61ffd000-61ffe000 ---p 00000000 00:00 0 
+61ffe000-627fd000 rwxp 00000000 00:00 0 
+627fd000-62beb000 r-xp 00000000 b3:02 7813       /tmp/libCameraServerJNI5005198719142451288.so (deleted)
+62beb000-62bfb000 ---p 003ee000 b3:02 7813       /tmp/libCameraServerJNI5005198719142451288.so (deleted)
+62bfb000-62c03000 rw-p 003ee000 b3:02 7813       /tmp/libCameraServerJNI5005198719142451288.so (deleted)
+62c03000-62c99000 rw-p 00000000 00:00 0 
+62c99000-62c9a000 ---p 00000000 00:00 0 
+62c9a000-63499000 rwxp 00000000 00:00 0 
+63499000-6349a000 ---p 00000000 00:00 0 
+6349a000-63c99000 rwxp 00000000 00:00 0 
+63c99000-63c9a000 ---p 00000000 00:00 0 
+63c9a000-64499000 rwxp 00000000 00:00 0 
+64499000-64530000 r-xp 00000000 b3:02 7812       /tmp/libNetworkTablesJNI4222442214629156310.so (deleted)
+64530000-64540000 ---p 00097000 b3:02 7812       /tmp/libNetworkTablesJNI4222442214629156310.so (deleted)
+64540000-64542000 rw-p 00097000 b3:02 7812       /tmp/libNetworkTablesJNI4222442214629156310.so (deleted)
+64542000-6503a000 r-xp 00000000 b3:02 383670     /home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/opencv/libopencv_java310.so
+6503a000-6504a000 ---p 00af8000 b3:02 383670     /home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/opencv/libopencv_java310.so
+6504a000-65060000 r--p 00af8000 b3:02 383670     /home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/opencv/libopencv_java310.so
+65060000-65066000 rw-p 00b0e000 b3:02 383670     /home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/opencv/libopencv_java310.so
+65066000-65100000 rw-p 00000000 00:00 0 
+65100000-65121000 rw-p 00000000 00:00 0 
+65121000-65200000 ---p 00000000 00:00 0 
+65200000-652fd000 rw-p 00000000 00:00 0 
+652fd000-65300000 ---p 00000000 00:00 0 
+65300000-65352000 rw-p 00000000 00:00 0 
+65352000-65400000 ---p 00000000 00:00 0 
+65480000-65483000 ---p 00000000 00:00 0 
+65483000-65600000 rwxp 00000000 00:00 0 
+65600000-65621000 rw-p 00000000 00:00 0 
+65621000-65700000 ---p 00000000 00:00 0 
+65977000-65b00000 r--p 00000000 b3:02 18794      /usr/lib/locale/locale-archive
+65b00000-65b21000 rw-p 00000000 00:00 0 
+65b21000-65c00000 ---p 00000000 00:00 0 
+65c0f000-65c21000 r-xp 00000000 b3:02 2461       /lib/arm-linux-gnueabihf/libresolv-2.19.so
+65c21000-65c30000 ---p 00012000 b3:02 2461       /lib/arm-linux-gnueabihf/libresolv-2.19.so
+65c30000-65c31000 r--p 00011000 b3:02 2461       /lib/arm-linux-gnueabihf/libresolv-2.19.so
+65c31000-65c32000 rw-p 00012000 b3:02 2461       /lib/arm-linux-gnueabihf/libresolv-2.19.so
+65c32000-65c34000 rw-p 00000000 00:00 0 
+65c34000-65c5a000 rw-s 00072000 00:06 8487       /dev/video0
+65c5a000-65c80000 rw-s 0004c000 00:06 8487       /dev/video0
+65c80000-65c83000 ---p 00000000 00:00 0 
+65c83000-65e00000 rwxp 00000000 00:00 0 
+65e00000-65e21000 rw-p 00000000 00:00 0 
+65e21000-65f00000 ---p 00000000 00:00 0 
+65f01000-65f05000 r-xp 00000000 b3:02 2435       /lib/arm-linux-gnueabihf/libnss_dns-2.19.so
+65f05000-65f14000 ---p 00004000 b3:02 2435       /lib/arm-linux-gnueabihf/libnss_dns-2.19.so
+65f14000-65f15000 r--p 00003000 b3:02 2435       /lib/arm-linux-gnueabihf/libnss_dns-2.19.so
+65f15000-65f16000 rw-p 00004000 b3:02 2435       /lib/arm-linux-gnueabihf/libnss_dns-2.19.so
+65f16000-65f3c000 rw-s 00026000 00:06 8487       /dev/video0
+65f3c000-65f62000 rw-s 00000000 00:06 8487       /dev/video0
+65f62000-65f64000 r-xp 00000000 b3:02 2440       /lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2
+65f64000-65f6b000 ---p 00002000 b3:02 2440       /lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2
+65f6b000-65f6c000 r--p 00001000 b3:02 2440       /lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2
+65f6c000-65f6d000 rw-p 00002000 b3:02 2440       /lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2
+65f80000-65f83000 ---p 00000000 00:00 0 
+65f83000-66100000 rwxp 00000000 00:00 0 
+66100000-66121000 rw-p 00000000 00:00 0 
+66121000-66200000 ---p 00000000 00:00 0 
+66206000-66209000 r--s 0001e000 b3:02 111315     /home/pi/.gradle/caches/modules-2/files-2.1/org.opencv/opencv-java/3.1.0/2a534baab7f01c049ba9768adb645f9b0128f987/opencv-java-3.1.0.jar
+6620a000-6620b000 r--p 00000000 b3:02 73638      /usr/share/locale/en_GB/LC_MESSAGES/libc.mo
+6620b000-66210000 r--s 00092000 b3:02 384265     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/jsse.jar
+66210000-66211000 r--s 00193000 b3:02 111313     /home/pi/.gradle/caches/modules-2/files-2.1/edu.wpi.cscore.java/cscore/1.0.1/456aeaf0c97374dd8a108da54ca88431d3056758/cscore-1.0.1-arm-raspbian.jar
+66211000-66213000 r--s 0004a000 b3:02 111311     /home/pi/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilib.networktables.java/NetworkTables/3.1.6/b19a2fdb6cd218f87d084cb0fb3e4f9ba2f48b98/NetworkTables-3.1.6-arm-raspbian.jar
+66213000-66216000 r--s 0000f000 b3:02 384206     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/icedtea-sound.jar
+66216000-66232000 r--s 00393000 b3:02 384198     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/cldrdata.jar
+66232000-66233000 ---p 00000000 00:00 0 
+66233000-662d2000 rwxp 00000000 00:00 0 
+662d2000-6631f000 rw-p 00000000 00:00 0 
+6631f000-664ec000 r--s 03bb3000 b3:02 384192     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/rt.jar
+664ec000-667cd000 rw-p 00000000 00:00 0 
+667cd000-66993000 ---p 00000000 00:00 0 
+66993000-66996000 rw-p 00000000 00:00 0 
+66996000-669b7000 ---p 00000000 00:00 0 
+669b7000-669bc000 rw-p 00000000 00:00 0 
+669bc000-669ff000 ---p 00000000 00:00 0 
+669ff000-66ea0000 rw-p 00000000 00:00 0 
+66ea0000-6b200000 ---p 00000000 00:00 0 
+6b200000-6bb60000 rw-p 00000000 00:00 0 
+6bb60000-74200000 ---p 00000000 00:00 0 
+74200000-74202000 r--s 00001000 b3:02 384199     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/dnsns.jar
+74202000-7421b000 r--s 001bc000 b3:02 384200     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/nashorn.jar
+7421b000-74220000 rw-p 00000000 00:00 0 
+74220000-74264000 ---p 00000000 00:00 0 
+74264000-74265000 rw-p 00000000 00:00 0 
+74265000-742e4000 ---p 00000000 00:00 0 
+742e4000-7430c000 rwxp 00000000 00:00 0 
+7430c000-762e4000 ---p 00000000 00:00 0 
+762e4000-762ef000 r-xp 00000000 b3:02 2436       /lib/arm-linux-gnueabihf/libnss_files-2.19.so
+762ef000-762fe000 ---p 0000b000 b3:02 2436       /lib/arm-linux-gnueabihf/libnss_files-2.19.so
+762fe000-762ff000 r--p 0000a000 b3:02 2436       /lib/arm-linux-gnueabihf/libnss_files-2.19.so
+762ff000-76300000 rw-p 0000b000 b3:02 2436       /lib/arm-linux-gnueabihf/libnss_files-2.19.so
+76300000-763fc000 rw-p 00000000 00:00 0 
+763fc000-76400000 ---p 00000000 00:00 0 
+76400000-76401000 r--s 00008000 b3:02 384203     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/sunec.jar
+76401000-76403000 r--s 00006000 b3:02 6456       /usr/share/java/java-atk-wrapper.jar
+76403000-7640a000 r-xp 00000000 b3:02 384244     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libzip.so
+7640a000-76419000 ---p 00007000 b3:02 384244     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libzip.so
+76419000-7641a000 r--p 00006000 b3:02 384244     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libzip.so
+7641a000-7641b000 rw-p 00007000 b3:02 384244     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libzip.so
+7641b000-76424000 r-xp 00000000 b3:02 2444       /lib/arm-linux-gnueabihf/libnss_nis-2.19.so
+76424000-76433000 ---p 00009000 b3:02 2444       /lib/arm-linux-gnueabihf/libnss_nis-2.19.so
+76433000-76434000 r--p 00008000 b3:02 2444       /lib/arm-linux-gnueabihf/libnss_nis-2.19.so
+76434000-76435000 rw-p 00009000 b3:02 2444       /lib/arm-linux-gnueabihf/libnss_nis-2.19.so
+76435000-76446000 r-xp 00000000 b3:02 2433       /lib/arm-linux-gnueabihf/libnsl-2.19.so
+76446000-76455000 ---p 00011000 b3:02 2433       /lib/arm-linux-gnueabihf/libnsl-2.19.so
+76455000-76456000 r--p 00010000 b3:02 2433       /lib/arm-linux-gnueabihf/libnsl-2.19.so
+76456000-76457000 rw-p 00011000 b3:02 2433       /lib/arm-linux-gnueabihf/libnsl-2.19.so
+76457000-76459000 rw-p 00000000 00:00 0 
+76459000-76460000 r-xp 00000000 b3:02 2434       /lib/arm-linux-gnueabihf/libnss_compat-2.19.so
+76460000-7646f000 ---p 00007000 b3:02 2434       /lib/arm-linux-gnueabihf/libnss_compat-2.19.so
+7646f000-76470000 r--p 00006000 b3:02 2434       /lib/arm-linux-gnueabihf/libnss_compat-2.19.so
+76470000-76471000 rw-p 00007000 b3:02 2434       /lib/arm-linux-gnueabihf/libnss_compat-2.19.so
+76471000-76495000 r-xp 00000000 b3:02 384226     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libjava.so
+76495000-764a4000 ---p 00024000 b3:02 384226     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libjava.so
+764a4000-764a5000 r--p 00023000 b3:02 384226     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libjava.so
+764a5000-764a6000 rw-p 00024000 b3:02 384226     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libjava.so
+764a6000-764b2000 r-xp 00000000 b3:02 384243     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libverify.so
+764b2000-764c2000 ---p 0000c000 b3:02 384243     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libverify.so
+764c2000-764c3000 r--p 0000c000 b3:02 384243     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libverify.so
+764c3000-764c4000 rw-p 0000d000 b3:02 384243     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/libverify.so
+764c4000-764ca000 r-xp 00000000 b3:02 2462       /lib/arm-linux-gnueabihf/librt-2.19.so
+764ca000-764d9000 ---p 00006000 b3:02 2462       /lib/arm-linux-gnueabihf/librt-2.19.so
+764d9000-764da000 r--p 00005000 b3:02 2462       /lib/arm-linux-gnueabihf/librt-2.19.so
+764da000-764db000 rw-p 00006000 b3:02 2462       /lib/arm-linux-gnueabihf/librt-2.19.so
+764db000-764df000 ---p 00000000 00:00 0 
+764df000-7665b000 rwxp 00000000 00:00 0 
+7665b000-76678000 r-xp 00000000 b3:02 2411       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+76678000-76687000 ---p 0001d000 b3:02 2411       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+76687000-76688000 rw-p 0001c000 b3:02 2411       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+76688000-766f1000 r-xp 00000000 b3:02 2425       /lib/arm-linux-gnueabihf/libm-2.19.so
+766f1000-76701000 ---p 00069000 b3:02 2425       /lib/arm-linux-gnueabihf/libm-2.19.so
+76701000-76702000 r--p 00069000 b3:02 2425       /lib/arm-linux-gnueabihf/libm-2.19.so
+76702000-76703000 rw-p 0006a000 b3:02 2425       /lib/arm-linux-gnueabihf/libm-2.19.so
+76703000-767c4000 r-xp 00000000 b3:02 138953     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.20
+767c4000-767d3000 ---p 000c1000 b3:02 138953     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.20
+767d3000-767d7000 r--p 000c0000 b3:02 138953     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.20
+767d7000-767d9000 rw-p 000c4000 b3:02 138953     /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.20
+767d9000-767df000 rw-p 00000000 00:00 0 
+767df000-76cf2000 r-xp 00000000 b3:02 384213     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76cf2000-76d01000 ---p 00513000 b3:02 384213     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d01000-76d0e000 r--p 00512000 b3:02 384213     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d0e000-76d20000 rw-p 0051f000 b3:02 384213     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/server/libjvm.so
+76d20000-76d31000 rw-p 00000000 00:00 0 
+76d31000-76e5c000 r-xp 00000000 b3:02 2397       /lib/arm-linux-gnueabihf/libc-2.19.so
+76e5c000-76e6c000 ---p 0012b000 b3:02 2397       /lib/arm-linux-gnueabihf/libc-2.19.so
+76e6c000-76e6e000 r--p 0012b000 b3:02 2397       /lib/arm-linux-gnueabihf/libc-2.19.so
+76e6e000-76e6f000 rw-p 0012d000 b3:02 2397       /lib/arm-linux-gnueabihf/libc-2.19.so
+76e6f000-76e72000 rw-p 00000000 00:00 0 
+76e72000-76e74000 r-xp 00000000 b3:02 2405       /lib/arm-linux-gnueabihf/libdl-2.19.so
+76e74000-76e83000 ---p 00002000 b3:02 2405       /lib/arm-linux-gnueabihf/libdl-2.19.so
+76e83000-76e84000 r--p 00001000 b3:02 2405       /lib/arm-linux-gnueabihf/libdl-2.19.so
+76e84000-76e85000 rw-p 00002000 b3:02 2405       /lib/arm-linux-gnueabihf/libdl-2.19.so
+76e85000-76e92000 r-xp 00000000 b3:02 384209     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76e92000-76ea1000 ---p 0000d000 b3:02 384209     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76ea1000-76ea2000 r--p 0000c000 b3:02 384209     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76ea2000-76ea3000 rw-p 0000d000 b3:02 384209     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/arm/jli/libjli.so
+76ea3000-76eb9000 r-xp 00000000 b3:02 2481       /lib/arm-linux-gnueabihf/libz.so.1.2.8
+76eb9000-76ec8000 ---p 00016000 b3:02 2481       /lib/arm-linux-gnueabihf/libz.so.1.2.8
+76ec8000-76ec9000 r--p 00015000 b3:02 2481       /lib/arm-linux-gnueabihf/libz.so.1.2.8
+76ec9000-76eca000 rw-p 00016000 b3:02 2481       /lib/arm-linux-gnueabihf/libz.so.1.2.8
+76eca000-76ede000 r-xp 00000000 b3:02 2459       /lib/arm-linux-gnueabihf/libpthread-2.19.so
+76ede000-76eee000 ---p 00014000 b3:02 2459       /lib/arm-linux-gnueabihf/libpthread-2.19.so
+76eee000-76eef000 r--p 00014000 b3:02 2459       /lib/arm-linux-gnueabihf/libpthread-2.19.so
+76eef000-76ef0000 rw-p 00015000 b3:02 2459       /lib/arm-linux-gnueabihf/libpthread-2.19.so
+76ef0000-76ef2000 rw-p 00000000 00:00 0 
+76ef2000-76ef8000 r--s 0003a000 b3:02 384204     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/sunjce_provider.jar
+76ef8000-76efb000 r--s 00037000 b3:02 384205     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/sunpkcs11.jar
+76efb000-76f05000 r--s 00116000 b3:02 384202     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/localedata.jar
+76f05000-76f0a000 r-xp 00000000 b3:02 138554     /usr/lib/arm-linux-gnueabihf/libarmmem.so
+76f0a000-76f19000 ---p 00005000 b3:02 138554     /usr/lib/arm-linux-gnueabihf/libarmmem.so
+76f19000-76f1a000 rw-p 00004000 b3:02 138554     /usr/lib/arm-linux-gnueabihf/libarmmem.so
+76f1a000-76f3a000 r-xp 00000000 b3:02 2361       /lib/arm-linux-gnueabihf/ld-2.19.so
+76f3a000-76f3b000 r--s 00010000 b3:02 384201     /usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/zipfs.jar
+76f3b000-76f43000 rw-s 00000000 b3:02 387039     /tmp/hsperfdata_pi/1228 (deleted)
+76f43000-76f44000 ---p 00000000 00:00 0 
+76f44000-76f47000 rw-p 00000000 00:00 0 
+76f47000-76f49000 rw-p 00000000 00:00 0 
+76f49000-76f4a000 r--p 0001f000 b3:02 2361       /lib/arm-linux-gnueabihf/ld-2.19.so
+76f4a000-76f4b000 rw-p 00020000 b3:02 2361       /lib/arm-linux-gnueabihf/ld-2.19.so
+7ed2e000-7ed4f000 rwxp 00000000 00:00 0          [stack]
+7ed4f000-7ed50000 rw-p 00000000 00:00 0 
+7ef94000-7ef95000 r-xp 00000000 00:00 0          [sigpage]
+7ef95000-7ef96000 r--p 00000000 00:00 0          [vvar]
+7ef96000-7ef97000 r-xp 00000000 00:00 0          [vdso]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+VM Arguments:
+jvm_args: -Djava.library.path=/home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/opencv -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant 
+java_command: Main
+java_class_path (initial): /home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/classes/main:/home/pi/Desktop/FRC 2017 Steamworks /Basic Vision/JavaGradle/Java/build/resources/main:/home/pi/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilib.networktables.java/NetworkTables/3.1.6/b19a2fdb6cd218f87d084cb0fb3e4f9ba2f48b98/NetworkTables-3.1.6-arm-raspbian.jar:/home/pi/.gradle/caches/modules-2/files-2.1/edu.wpi.cscore.java/cscore/1.0.1/456aeaf0c97374dd8a108da54ca88431d3056758/cscore-1.0.1-arm-raspbian.jar:/home/pi/.gradle/caches/modules-2/files-2.1/org.opencv/opencv-java/3.1.0/2a534baab7f01c049ba9768adb645f9b0128f987/opencv-java-3.1.0.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x4ac938], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0x4ac938], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x3b8d74], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x3b8d74], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x3b8d74], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x3b8d74], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x3b8c20], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x3b8e44], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x3b8e44], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x3b8e44], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x3b8e44], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:PRETTY_NAME="Raspbian GNU/Linux 8 (jessie)"
+NAME="Raspbian GNU/Linux"
+VERSION_ID="8"
+VERSION="8 (jessie)"
+ID=raspbian
+ID_LIKE=debian
+HOME_URL="http://www.raspbian.org/"
+SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+
+uname:Linux 4.4.34-v7+ #930 SMP Wed Nov 23 15:20:41 GMT 2016 armv7l
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 6828, NOFILE 65536, AS infinity
+load average:0.73 0.61 0.28
+
+/proc/meminfo:
+MemTotal:         882772 kB
+MemFree:          517752 kB
+MemAvailable:     678576 kB
+Buffers:           20168 kB
+Cached:           183404 kB
+SwapCached:            0 kB
+Active:           226184 kB
+Inactive:         104328 kB
+Active(anon):     127284 kB
+Inactive(anon):     5816 kB
+Active(file):      98900 kB
+Inactive(file):    98512 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                56 kB
+Writeback:             0 kB
+AnonPages:        126960 kB
+Mapped:            51188 kB
+Shmem:              6264 kB
+Slab:              18096 kB
+SReclaimable:       8740 kB
+SUnreclaim:         9356 kB
+KernelStack:        2040 kB
+PageTables:         1488 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      441384 kB
+Committed_AS:     360248 kB
+VmallocTotal:    1179648 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+CmaTotal:           8192 kB
+CmaFree:            3560 kB
+
+
+CPU:total 4 
+
+/proc/cpuinfo:
+processor	: 0
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 76.80
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 1
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 76.80
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 2
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 76.80
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+processor	: 3
+model name	: ARMv7 Processor rev 4 (v7l)
+BogoMIPS	: 76.80
+Features	: half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae evtstrm crc32 
+CPU implementer	: 0x41
+CPU architecture: 7
+CPU variant	: 0x0
+CPU part	: 0xd03
+CPU revision	: 4
+
+Hardware	: BCM2709
+Revision	: a22082
+Serial		: 0000000089d29603
+
+
+Memory: 4k page, physical 882772k(518552k free), swap 0k(0k free)
+
+vm_info: OpenJDK Zero VM (25.40-b08) for linux-arm-vfp JRE (1.8.0_40-internal-b04), built on Dec 27 2014 18:37:23 by "buildd" with gcc 4.9.1
+
+time: Mon Feb  6 05:21:15 2017
+elapsed time: 82 seconds (0d 0h 1m 22s)
+
